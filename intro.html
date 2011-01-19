@@ -1,0 +1,196 @@
+<html>
+    <head>
+        <title>EECS 338, Spring 2011: Intro to Linux</title>
+        <link href="base-style.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="nav.js"></script>
+    </head>
+    <body onLoad="nav('nav')">
+        <center>
+        <div class="content">
+            <div>
+              <h1>EECS 338: Operating Systems</h1>
+              <h2>Intro to Linux</h2>
+            </div>
+            <div>
+                <table cellspacing="20px">
+                    <COLGROUP width="20%" />
+                    <COLGROUP width="80%" />
+                    <tr>
+                        <td id="nav" valign="top"></td>
+                        <td valign="top">
+<h2>Contents</h2>
+<ol>
+<li><a href="#connecting">Connecting to a Unix Lab Computer</a></li>
+<li><a href="#commands">Basic Unix Commands</a></li>
+<li><a href="#config">Configuration</a></li>
+<li><a href="#screen">Screen</a></li>
+<li><a href="#editor">Text Editors</a></li>
+<li><a href="#pipes">Pipes</a></li>
+</ol>
+                            <h3><a name="connecting">Connecting to a Unix Lab Computer</a></h3>
+                            <p>
+After you set up an account with a Unix Lab Computer, you can use an ssh client
+to connect. SSH stands for <i>Secure Shell</i>, and opens an encrypted
+connection to a shell interface on a remote computer. From Mac OS X, you can
+connect using the command:
+
+<blockquote><code>ssh abc123@lechuck.case.edu</code></blockquote>
+
+If you are using Windows, you will need to download the
+<a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">PuTTY</a>
+ssh client (or something similar). With PuTTY, you specify the host name (lechuck.case.edu) in the
+appropriate field, and you will be prompted for a user name when you login.
+                            </p>
+                            <p>
+If you are prompted to accept certificates and trust that you are connecting
+to the correct machine, then say &#8220;yes.&#8221;
+                            </p>
+                            <h3><a name="commands">Basic Unix Commands</a></h3>
+<dl>
+<dt><code>man [command]</code></dt>
+<dd>Prints manual entry (help info) for the given command</dd>
+<dt><code>ls</code></dt>
+<dd>Lists files in the current directory (use <code>-a</code> for all files, or
+<code>-l</code> for long version with extra information)</dd>
+<dt><code>cd [new directory]</code></dt>
+<dd>Change directory to [new directory]</dd>
+<dt><code>mv [source] [destination]</code></dt>
+<dd>Moves a file from source to destination (also used for renaming files)</dd>
+<dt><code>mkdir [new directory]</code></dt>
+<dd>Make directory called [new directory]</dd>
+<dt><code>rm [file]</code></dt>
+<dd>Remove a file (use <code>-r</code> for recursively removing a directory)</dd>
+<dt><code>ps</code></dt>
+<dd>List processes (use <code>ax</code> to list all processes)</dd>
+<dt><code>chmod [mode] [file]</code></dt>
+<dd>Change mode of a file (read/write/execute permissions)</dd>
+</dl>
+                          <h3><a name="config">Configuration</a></h3>
+<p>
+On GitHub, there are some <a href="https://github.com/cwru-eecs338/dotfiles">configuration files</a>
+that will make it nicer to interact with the shell, screen, and Vim, described
+below.
+
+                          <h3><a name="screen">GNU Screen</a></h3>
+                          <p>
+Screen is a powerful tool that lets you create multi&#8211;tabbed, detachable
+shell session on a remote computer. To use it, type the command:
+<blockquote><code>screen</code></blockquote>
+Now, you are in a shell session within a shell session (have you seen
+<i>Inception</i>?). You can be doing some work here (for example, editing some
+code). But what if you want to do something else, like test your program that
+runs for a while? You can use <code>ctrl+a c</code> to create a
+new screen. It will look like your old screen disappeared, but it is still there
+in the background.
+                          </p>
+                          <p>
+Now, in your new screen, you can start your program, and let it run. To switch
+back to your original screen, use <code>ctrl+a 0</code>. Now, you can do some
+more work, and switch back to your running program using <code>ctrl+a 1</code>.
+In general, <code>ctrl+a #</code> switches to screen number #.
+                          </p>
+                          <p>
+You've been working in the lab, but it's time to go home. However, your program
+in Screen #1 is still running. No problem. Just use <code>ctrl+a d</code> to
+detach from the screen session, and you will be dropped back to your original
+shell session. However, the screen session is still in existence, with your
+program still running in it.
+                          </p>
+                          <p>
+When you get home, you log back into the lab computer via <code>ssh</code>.
+Then, you type:
+<blockquote><code>screen -ls</code></blockquote>
+to see a list of existing shell sessions. There's only one (the one you left
+running at the lab), so you type:
+<blockquote><code>screen -r</code></blockquote>
+to reattach to the session. If there were multiple sessions, you could use:
+<blockquote><code>screen -r [session id]</code></blockquote>
+And, now you can resume the work you started in the lab.
+                          </p>
+                          <p>
+As a final note, screen is also useful in case your ssh connection is dropped
+for some reason. You can log back in and reattach without losing any work.
+                          </p>
+<h3><a name="editor">Using a Text Editor</a></h3>
+<p>
+While connected to a remote computer via ssh, you will need to edit text files
+from the command line. Simple editors like nano exist, but I strongly recommend
+getting used to either Vim or Emacs, which are both powerful editors. I
+personally use Vim (I'm writing this page in Vim right now), and here's just
+some of the stuff it can do out of the box:
+</p>
+<ul>
+  <li>Code auto&#8211;completion</li>
+  <li>Spell checking</li>
+  <li>Block, line, and traditional visual selection</li>
+  <li>Multiple windows</li>
+  <li>Automatic text wrapping and indentation</li>
+  <li>Execute shell commands</li>
+  <li>...</li>
+</ul>
+<p>
+Vim (or Emacs) is powerful because anything you would ever want to do can be
+done without your fingers leaving the keyboard. It might take some extra time to
+learn, but there are some good tutorials online and it is worth it. In fact,
+typing the command:
+<blockquote><code>vimtutor</code></blockquote>
+from the shell is a good place to start.
+</p>
+<h3><a name="pipes">Pipe Camp</a></h3>
+<p>
+In the OS course, you will learn about various methods of interprocess
+communication. In the shell, pipes are a way to hook processes together.
+</p>
+<p>
+Every process has access to &#8220;standard in&#8221; (stdin) and
+&#8220;standard out&#8221; (stdout), which are treated like files. By default,
+the contents of these files are read from and written to the shell. However,
+pipes allow redirection of stdin and stdout to files, or other processes.
+</p>
+<p>
+For example, consider the command:
+<blockquote><code>ps ax</code></blockquote>
+which prints a list of processes to stdout. However, this list might be long, so
+that the processes at the top of the list disappear. There is a command called
+<code>more</code>, which accepts input from stdin, and prints only a bit at a
+time (as much as will fit on the screen) to stdout. If we pipe the result of
+<code>ps</code> into <code>more</code> like so:
+<blockquote><code>ps ax | more</code></blockquote>
+then we can scroll through the output at our leisure.
+</p>
+<p>
+As a final example, suppose we are running a processes called
+<code>myserver</code> and we want to kill it. In order to use the
+<code>kill</code> command, we need to know the process id. We can manually
+search for it in the output of <code>ps</code>, or we can use <code>grep</code>,
+which can find regular expressions in stdin. So we use the command chain:
+<blockquote><code>ps ax | grep -w myserver</code></blockquote>
+which will find and print all lines in the output of <code>ps</code> that
+contain the word &#8220;myserver&#8221; (the <code>-w</code> argument specifies
+a whole word match).
+</p>
+<p>
+The output might be something like:
+<blockquote><code>
+21588 pts/0    S+     0:02 myserver <br />
+24344 pts/0    S+     0:00 grep -w vim
+</code></blockquote>
+in which case we could then kill the server using:
+<blockquote><code>kill 21588</code></blockquote>
+</p>
+<p>
+Finally, if we want to save the results of a command for later, we can pipe
+stdout to file using <code>&gt;</code>, or <code>&gt;&gt;</code> to append to an
+existing file. For example, we can save the process list via:
+<blockquote><code>ps ax &gt; processes.txt</code></blockquote>
+Likewise, we can use a file in place of stdin like so:
+<blockquote><code>grep -w vim &lt; processes.txt</code></blockquote>
+</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+      </center>
+    </body>
+</html>

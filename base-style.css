@@ -1,0 +1,27 @@
+body{
+    background-color: rgb(238, 238, 238);
+    font-family: Verdana, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+}
+div.content{
+    background-color: white;
+    border-color: rgb(204, 204, 204);
+    border-style: solid;
+    border-width: 1px;
+    text-align: left;
+    display: block;
+    width: 686px;
+    padding: 25px;
+}
+h1 {
+    font-size: 20px;
+}
+h2 {
+    font-size: 16px;
+}
+h3 {
+    font-size: 15px;
+}
+dd {
+    margin-bottom: 10px;
+}
