@@ -1,6 +1,7 @@
 function nav(id) {
     var NAVS = [['index.html', 'Home'],
                 ['https://github.com/cwru-eecs338', 'Code'],
+                ['slides.html', 'Slides'],
                 ['intro.html', 'Intro to Linux'],
                 ['resources.html', 'Resources']
                ];
