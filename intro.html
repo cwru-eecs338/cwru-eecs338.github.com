@@ -21,6 +21,7 @@
 <h2>Contents</h2>
 <ol>
 <li><a href="#connecting">Connecting to a Unix Lab Computer</a></li>
+<li><a href="#files">Accessing Files on a Unix Lab Computer</a></li>
 <li><a href="#commands">Basic Unix Commands</a></li>
 <li><a href="#config">Configuration</a></li>
 <li><a href="#screen">Screen</a></li>
@@ -46,6 +47,49 @@ If you are prompted to accept certificates and trust that you are connecting
 to the correct machine, then say &#8220;yes.&#8221; The password should be your CWRU Single Sign&#8211;On
 password.
                             </p>
+                            <h3><a name="files"></a>Accessing Files on a Unix Lab Computer</h3>
+<p>
+If you use Windows, there is a program called
+<a href="http://winscp.net/eng/index.php">WinSCP</a> that will let you copy
+files from the lab computer to your machine (and vice versa). The login process
+is similar to that for PuTTY.
+</p>
+<p>
+For Mac OS X and Linux/Unix users, you can use the command <code>scp</code>,
+which stands for <i>secure copy</i>. For example, to copy files in [dir] from
+your computer to the lab computer, you can use this command on your computer:
+
+<blockquote><code>scp -r [dir] abc123@eecslinab.case.edu:</code></blockquote>
+
+Here, the <code>-r</code> indicates that the copy should be performed
+recursively on the entire directory. If you just want to copy a single file
+[file], all you need is:
+
+<blockquote><code>scp [file] abc123@eecslinab.case.edu:</code></blockquote>
+</p>
+<p>
+By default, <code>abc123@eecslinab.case.edu:</code> specifies the home directory
+of the remote (lab) machine. If you want to copy into a subdirectory of your
+home directory, you can specify that information after the colon, such as:
+
+<blockquote><code>scp [file] abc123@eecslinab.case.edu:EECS338/HW1/</code></blockquote>
+
+</p>
+<p>
+Copying files from the remote (lab) computer just works with the arguments
+reversed. So again, from your computer, issue the command:
+
+<blockquote><code>scp -r abc123@eecslinab.case.edu:EECS338/HW1 [dir]</code></blockquote>
+
+The copied files will be placed in [dir]. See the <code>man</code> page for more
+details.
+</p>
+<p>
+There is probably also a GUI&#8211;based solution to connecting to the lab
+servers for Mac OS X and Linux, but I'm not familiar with the details for Mac or
+specific Linux distributions. But as an example, on Ubuntu it's under
+<i>Places</i>, <i>Connect to Server</i>, using SSH as server type.
+</p>
                             <h3><a name="commands">Basic Unix Commands</a></h3>
 <dl>
 <dt><code>man [command]</code></dt>
