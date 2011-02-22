@@ -3,7 +3,8 @@ function nav(id) {
                 ['https://github.com/cwru-eecs338', 'Code'],
                 ['slides.html', 'Slides'],
                 ['intro.html', 'Intro to Linux'],
-                ['resources.html', 'Resources']
+                ['resources.html', 'Resources'],
+                ['contact.html', 'Contact Info']
                ];
     var navElement = document.getElementById(id);
     for(var i = 0; i < NAVS.length; i++) {
