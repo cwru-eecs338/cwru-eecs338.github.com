@@ -44,12 +44,23 @@ Introduce API for shared memory in System V Unix, using the same example code fo
 Introduce API for semaphores in System V Unix, with delicious example code for the
  <a href="https://github.com/cwru-eecs338/semaphores">bounded buffer problem</a>.
 </p>
-<h3>02/01/11: Structs and Pipes</h3>
-<p>
-Examples of using <a href="https://github.com/cwru-eecs338/structs_getpwuid">structured types in C</a>, followed by an
-introduction to <a href="https://github.com/cwru-eecs338/mario_pipe">unnamed pipes</a>.
-</p>
 -->
+<h3>02/07/12: Pipes</h3>
+<p>
+Today, we'll talk about named and unnamed pipes in Unix. First, I'll show how
+pipes can be used to implement communication between processes, with
+<a href="https://github.com/cwru-eecs338/mario_pipe">this code example</a>.
+Next, I'll talk about using pipes in the shell, with a brief introduction to
+shell scripts. Then, I'll show how shell pipes can be implemented in C using
+unnamed pipes and the <code>dup()</code> call, with
+<a href="https://github.com/cwru-eecs338/pipes">this example</a>. Finally, I'll
+show how to create and use named pipes from the shell.
+</p>
+<p>
+With any remaining time, I'll discuss
+<a href="https://github.com/cwru-eecs338/structs_getpwuid">structured types in C</a>,
+which will be used in future assignments.
+</p>
 <h3>01/31/12: System Calls</h3>
 <p>
 The second recitation will focus on system calls. First, we will discuss how they
