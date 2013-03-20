@@ -18,99 +18,19 @@
                     <tr>
                         <td id="nav" valign="top"></td>
                         <td valign="top">
-<!--
-<h3>03/29/11: Java Threading</h3>
+<h3>2013-03-19: Recitation 8</h3>
 <p>
-Java version of the Readers-Writers simulation is posted 
-<a href="https://github.com/cwru-eecs338/JavaThreader" >here</a>.
+In the eigth recitation we revisited the System V <a href="slides/shared-memory.pdf">shared memory API</a> and its usage. We examined the <a href="https://github.com/cwru-eecs338/semaphores">example semaphore code</a>, focusing on the usage of the shared memory calls to  pass structured data between processes (specifically, casting the pointer returned by shmat() to whatever data type you want to use). We also briefly discussed System V shared memory and semaphore usage in Python through the <a href="http://semanchuk.com/philip/sysv_ipc/">sysv_ipc</a> package.
 </p>
-<h3>03/28/11: POSIX</h3>
+<h3>2013-03-05: Recitation 7</h3>
 <p>
-Example using POSIX Semaphores and POSIX Threads Posted
-<a href="https://github.com/cwru-eecs338/PosixExample">here</a>.
-</p>
--->
-<!--
-<h3>03/20/12: Homework 4 Prep</h3>
-<p>
-We are going to review homework 4. Talk about what you are going to do and how
-you are going to do it. The assignment sheet is a little unclear, so ask a
-friend if you miss it!
-</p>
-<h3>03/06/12: Midterm Review</h3>
-<p>
-Bring questions.
-</p>
-<h3>02/28/12: System V Message Queues and Semaphore Review</h3>
-<p>
-We'll review writing semaphore-based algorithms for written assignments and introduce the API for message queues in
-System V Unix, using the example code for a
-<a href="https://github.com/cwru-eecs338/msg_chatbot">chatbot</a>.
-</p>
-<h3>02/21/12: System V Shared Memory and Monitors in Java</h3>
-<p>
-First, we'll review semaphores and introduce the API for shared memory in
-System V Unix, using the same example code for the
-<a href="https://github.com/cwru-eecs338/semaphores">bounded buffer problem</a>.
-Then, we'll look at how monitors are implemented in Java, with example code for the 
-<a href="https://github.com/cwru-eecs338/java_monitors">dining philosophers problem</a>.
-</p>
-<h3>02/14/12: System V Semaphores</h3>
-<p>
-Introduce API for semaphores in System V Unix, with example code for the
- <a href="https://github.com/cwru-eecs338/semaphores">bounded buffer problem</a>.
-</p>
-<h3>02/07/12: Pipes</h3>
-<p>
-Today, we'll talk about named and unnamed pipes in Unix. First, I'll show how
-pipes can be used to implement communication between processes, with
-<a href="https://github.com/cwru-eecs338/mario_pipe">this code example</a>.
-Next, I'll talk about using pipes in the shell, with a brief introduction to
-shell scripts. Then, I'll show how shell pipes can be implemented in C using
-unnamed pipes and the <code>dup()</code> call, with
-<a href="https://github.com/cwru-eecs338/pipes">this example</a>. Finally, I'll
-show how to create and use named pipes from the shell.
-</p>
-<p>
-With any remaining time, I'll discuss
-<a href="https://github.com/cwru-eecs338/structs_getpwuid">structured types in C</a>,
-which will be used in future assignments.
-</p>
-<h3>01/31/12: System Calls</h3>
-<p>
-The second recitation will focus on system calls. First, we will discuss how they
-are implemented in the kernel, with
-<a href="https://github.com/cwru-eecs338/hello_syscalls">an example</a> of
-writing to standard out as a system call. Then, I will review an example of
-<a href="https://github.com/cwru-eecs338/fork_and_exec"><code>fork()</code> and
-<code>exec()</code></a>,
-which will be required for your first assignment.
-</p>
-<p>
-Other code examples from previous years describe
-<a href="https://github.com/cwru-eecs338/syscall_examples">environment variable</a>
-system calls, and
-<a href="https://github.com/cwru-eecs338/organization_example">how you can organize</a>
-a C program that consists of several files.
-</p>
-<p>
-Some slides are available <a href="slides/C_and_System_Calls.pdf">here</a>, or
-more generally, from the <a href="slides.html">slides page</a>.
-</p>
-
-<h3>01/24/12: First Recitation</h3>
-<p>An <a href="intro.html">introduction to Linux</a>, which will be used for the
-programming assignments. I reviewed <a href="https://github.com/cwru-eecs338/hello338">a very simple C program</a>, and
-<a href="https://github.com/cwru-eecs338/c_basics">a description of some of the basics of C</a> for those of you used
-to Java.</p>
--->
-<h3>3/5/2013: Recitation 7</h3>
 In the seventh recitation we discussed the concept of threads, and we looked at an overview of the <a href="https://docs.google.com/present/view?id=d37b66n_4d93jp2g5">POSIX threads and POSIX semaphore APIs</a> as well as a brief <a href="https://github.com/cwru-eecs338/PosixExample">code example showing the use of these POSIX APIs</a>.  Note that the error checking in the POSIX code example is not sufficient because it does not check for the conditions defined on the man page -- copy and paste at your own risk!  We revisited the System V semaphore API and saw <a href="https://docs.google.com/present/view?id=d37b66n_5c85qskgc">how to write wrappers for the semaphore wait() and signal() operations</a> to abstract away the complexity of the System V API.
-<h3>2/26/2013: Recitation 6</h3>
+</p>
+<h3>2013-02-26: Recitation 6</h3>
 <p>
 We examined the Java implementation of monitors and a <a href="https://github.com/cwru-eecs338/java_monitors">Java solution to the dining philosophers problem</a>.  Then we spent some time reviewing material for the midterm, including example problems and how to structure an answer to a concurrent algorithm analysis problem.
 <p>
-<h3>2/17/2013: Recitation 5</h3>
+<h3>2013-02-17: Recitation 5</h3>
 <p>
 We discussed the System V APIs for semaphores and shared memory.  Slides for semaphores are <a href="http://cwru-eecs338.github.com/slides/05Semaphores.sxi.pdf">here</a>.  Slides for shared memory are <a href="http://cwru-eecs338.github.com/slides/06SharedMem.sxi.pdf">here</a>.  We saw these APIs in action with a solution to the producer-consumer problem.  Two resources for further learning:
 <ul>
@@ -118,24 +38,22 @@ We discussed the System V APIs for semaphores and shared memory.  Slides for sem
 <li><a href="http://www.amazon.com/Interprocess-Communications-Linux-Nooks-Crannies/dp/0130460427">Interprocess Communications in Linux</a></li>
 </ul>
 </p>
-<h3>2/12/2013: Recitiation 4</h3>
+<h3>2013-02-12: Recitiation 4</h3>
 <p>
 MMR reviewed approaches to assignment 2.
 </p>
-<h3>2/5/2013: Recitation 3</h3>
+<h3>2013-02-05: Recitation 3</h3>
 <p>
 In the third recitation we discussed three debugging tools: strace, valgrind, and gdb.  To get the most out of valgrind and gdb, add debugging information to your binaries by compiling with gcc using the -g flag.  We discussed the concept of pipes and reviewed a <a href="https://github.com/cwru-eecs338/mario_pipe">a simple pipe example</a> using pipes for interprocess communication, and <a href="https://github.com/cwru-eecs338/pipes">an example of duplicating pipe file descriptors</a> to redirect stdin and stdout.  You will need to understand all these concepts to complete Assignment 2.
 </p>
 
-
-
-<h3>1/29/2013: Recitation 2</h3>
+<h3>2013-01-29: Recitation 2</h3>
 <p>
 Recitation 2 was an introduction to C highlighting the differences from Java.  We touched on the compiler (gcc), GNU Make and Makefiles, organization of C code.  We also discussed two examples: first, <a href="https://github.com/cwru-eecs338/hello_syscalls">system calls from the assembler up</a>; second, <a href="https://github.com/cwru-eecs338/fork_and_exec">how to use fork() and exec()<a/>.
 </p>
 
 
-<h3>1/22/2013: Recitation 1</h3>
+<h3>2013-01-22: Recitation 1</h3>
 <p>
 The first recitiation was an <a href="intro.html">introduction to Linux</a>, which will be used for the programming assignments.  We discussed the manual (man) system, and how to use to the manual to find information on system calls.
 </p>
