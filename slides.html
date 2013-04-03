@@ -1,80 +1,90 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>EECS 338, Spring 2012: Slides</title>
-    <link href="base-style.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="nav.js"></script>
-  </head>
-  <body onLoad="nav('nav')">
-    <center>
-      <div class="content">
-        <div>
-          <h1>EECS 338: Operating Systems</h1>
-          <h2>Slides</h2>
-        </div>
-        <div>
-          <table cellspacing="20px">
-            <COLGROUP width="20%" />
-            <COLGROUP width="80%" />
-            <tr>
-              <td id="nav" valign="top"></td>
-              <td valign="top">
-                <dl>
-                  <dt><a href="slides/C_and_System_Calls.pdf">C and System Calls</a></dt>
-                  <dd>
-                    Introduction to C, including boolean values, error handling, strings, and
-                    memory allocation. Review of system calls such as <code>fork()</code>,
-                    <code>exec()</code>, <code>time()</code>, <code>putenv()</code>, and
-                    <code>getenv()</code>.
-                  </dd>
-                  <dt><a href="slides/04Pipes.sxi.pdf">Pipes</a></dt>
-                  <dd>
-                    Introduction to programming with unnamed pipes. Slides by
-                    <a href="slides/bml8_338S06.tar.bz2">Brian Lauber</a>.
-                  </dd>
-                  <dt><a href="slides/05Semaphores.sxi.pdf">Semaphores</a> and
-                      <a href="slides/06SharedMem.sxi.pdf">Shared Memory</a></dt>
-                  <dd>
-                    More slides from 
-                    <a href="slides/bml8_338S06.tar.bz2">Brian Lauber</a>.
-                  </dd>
-                  <dt>
-                    See also Prof. Tekin's Wait and Signal Implemenations (on top of Sys V semaphores).
-                  </dt>
-                  <dd>
-                    <a href="http://art.case.edu/338.s12/example.semaphore.html">
-                      Wait and Signal Example</a>
-                  </dd>
-                </dl>
-                <dt>
-                  <a href="https://docs.google.com/present/view?id=dhr6rtvj_191d8bzwpgj">
-                    Monitors in Java</a>
-                </dt>
-                <dd> Some slides I actually wrote:
-                  <iframe 
-                    src="https://docs.google.com/present/embed?id=dhr6rtvj_191d8bzwpgj" 
-                    frameborder="0" width="410" height="342"></iframe>
-                </dd>
-                <dt>
-                  <a href="https://docs.google.com/present/view?id=d37b66n_5c85qskgc">System V</a></dt>
-                <dd>Slides on using the professor's example code </dd>
+<head>
+	<title>EECS 338, Spring 2012: Slides</title>
+	<link href="base-style.css" rel="stylesheet" type="text/css"/>
+	<script type="text/javascript" src="nav.js"></script>
+</head>
+<body onLoad="nav('nav')">
+<center>
+	<div class="content">
+		<div>
+			<h1>EECS 338: Operating Systems</h1>
 
-                <dt><a href="https://docs.google.com/present/view?id=d37b66n_4d93jp2g5">POSIX </a></dt>
-                <dd>Slides on how to use POSIX Semaphores and POSIX Threads</dd>
+			<h2>Slides</h2>
+		</div>
+		<div>
+			<table cellspacing="20px">
+				<COLGROUP width="20%"/>
+				<COLGROUP width="80%"/>
+				<tr>
+					<td id="nav" valign="top"></td>
+					<td valign="top">
+						<dl>
+							<dt><a href="slides/C_and_System_Calls.pdf">C and System Calls</a>
+							</dt>
+							<dd>
+								Introduction to C, including boolean values, error handling,
+								strings, and
+								memory allocation. Review of system calls such as
+								<code>fork()</code>,
+								<code>exec()</code>, <code>time()</code>, <code>putenv()</code>,
+								and
+								<code>getenv()</code>.
+							</dd>
+							<dt><a href="slides/04Pipes.sxi.pdf">Pipes</a></dt>
+							<dd>
+								Introduction to programming with unnamed pipes. Slides by
+								<a href="slides/bml8_338S06.tar.bz2">Brian Lauber</a>.
+							</dd>
+							<dt><a href="slides/05Semaphores.sxi.pdf">Semaphores</a> and
+								<a href="slides/06SharedMem.sxi.pdf">Shared Memory</a></dt>
+							<dd>
+								More slides from
+								<a href="slides/bml8_338S06.tar.bz2">Brian Lauber</a>.
+							</dd>
+							<dt>
+								See also Prof. Tekin's Wait and Signal Implemenations (on top of
+								Sys V semaphores).
+							</dt>
+							<dd>
+								<a href="http://art.case.edu/338.s12/example.semaphore.html">
+									Wait and Signal Example</a>
+							</dd>
+						</dl>
+						<dt>
+							<a href="https://docs.google.com/present/view?id=dhr6rtvj_191d8bzwpgj">
+								Monitors in Java</a>
+						</dt>
+						<dd> Some slides I actually wrote:
+							<iframe src="https://docs.google.com/present/embed?id=dhr6rtvj_191d8bzwpgj"
+									frameborder="0" width="410" height="342"></iframe>
+						</dd>
+						<dt>
+							<a href="https://docs.google.com/present/view?id=d37b66n_5c85qskgc">System
+								V</a></dt>
+						<dd>Slides on using the professor's example code</dd>
 
-                <dt><a href="https://docs.google.com/present/view?id=d37b66n_7dwqwbfd7">RPC </a></dt>
-                <dd>Using RPC and a Simple Echo Example via RPC</dd>
+						<dt><a href="https://docs.google.com/present/view?id=d37b66n_4d93jp2g5">POSIX </a>
+						</dt>
+						<dd>Slides on how to use POSIX Semaphores and POSIX Threads</dd>
 
-                <hr />
-                <p>
-                  The slides for this recitation section are based off of presentations given by
-                  previous TAs: Brian Lauber, E. Zeynep Erson, Remo Mueller, Gary Doran,
-                  and Tim Henderson.
-                </p>
-              </td>
-            </tr>
-          </table>
-        </div>
-      </div>
-    </center>
-  </body>
+						<dt><a href="https://docs.google.com/present/view?id=d37b66n_7dwqwbfd7">RPC </a>
+						</dt>
+						<dd>Using RPC and a Simple Echo Example via RPC</dd>
+
+						<hr/>
+						<p>
+							The slides for this recitation section are based off of
+							presentations given by
+							previous TAs: Brian Lauber, E. Zeynep Erson, Remo Mueller, Gary
+							Doran,
+							and Tim Henderson. </p>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</center>
+</body>
 </html>
