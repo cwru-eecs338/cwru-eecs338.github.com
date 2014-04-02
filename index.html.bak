@@ -175,20 +175,13 @@
 									Communications in Linux</a></li>
 						</ul>
 						</p>
-						
-						
 						<h3>2013-02-11: Recitiation 4</h3>
 
 						<p>
-							In the fourth recitation, we talked about the debugger--gdb, in linux. It is quite important to get familiar with the basic
-							 procedures of debugging because it is systematic way to locate the programming errors. A tutorial for gdb can be 
-							 found <a href="http://cseweb.ucsd.edu/classes/fa09/cse141/tutorial_gcc_gdb.html">here</a>.
-							</p>
-							<p>
-								In addition, we also began our discussion of Sytem V Semaphore in linux. Due to the time limit, only semaphore creation function(semget) and
-								semaphore control function (semctl) were covered. Sample code which uses semaphore to synchronize the activities of two processes can be found 
-							<a href="https://github.com/cwru-eecs338/sample_code_semaphore">here</a>. In this sample code, the creation, deletion, wait and sigal operation 
-							on semaphore is encapsulated in a more concise way.
+							<a href="http://cseweb.ucsd.edu/classes/fa09/cse141/tutorial_gcc_gdb.html">tutorial for gcc and gdb</a>
+							
+							
+							<a href="https://github.com/cwru-eecs338/sample_code_semaphore">sample code for semaphore</a>
 						</p>
 
 
