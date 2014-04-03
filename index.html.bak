@@ -20,56 +20,7 @@
 				<tr>
 					<td id="nav" valign="top"></td>
 					<td valign="top">
-						<h3>2013-04-23: Recitation 13</h3>
-
-						<p>
-							In the final recitation, we discussed the underlying concepts used
-							in character encoding schemes, especially the differences between
-							character <strong>sets</strong> (mappings from characters to
-							numbers) and character <strong>encodings</strong> (mappings from
-							these numbers to bytes that can be stored on disk or transmitted
-							over a network). This discussion centered around Ned Batchelder's
-							<a href="http://nedbatchelder.com/text/unipain.html">Pragmatic
-							Unicode</a> presentation, which describes the motivation behind
-							Unicode and UTF-8 and demonstrates some practical ways to deal with
-							character encoding in Python 2 and 3. The character encoding
-							&quot;facts of life&quot; and &quot;Unicode sandwich&quot; model are
-							general enough to apply to many other languages and frameworks,
-							however.
-						</p>
-
-						<p>
-							We also discussed basic usage of the Git version control system
-							with Scott Chacon's <a href="http://git-scm.com/book">Pro Git
-							book</a>, including why there's no such thing as a project that's
-							&quot;too small to version control&quot; with Git.
-						</p>
-
-						<h3>2013-04-16: Recitation 12</h3>
-
-						<p>
-							The twelfth recitation focused on <a
-								href="slides/shell-programming.pdf">shell scripting in bash</a>
-							and some of the programming constructs that are provided by the
-							shell. We examined a <a href="https://github.com/mruffalo/btrfs-snapshot-boot">
-							shell script addition to the Ubuntu (12.10+) initramfs scripts
-							</a>that creates btrfs snapshots of every top-level subvolume when
-							a system is booted.
-						</p>
-
-						<p>
-							Additionally, we reviewed some material for the midterm exam on
-							Wednesday, 2013-04-17.
-						</p>
-
-						<h3>2013-04-09: Recitation 11</h3>
-
-						<p>
-							In the eleventh recitation we discussed the usage of <a
-								href="slides/sockets.pdf">the Berkeley sockets API</a>, using
-							<a href="https://github.com/cwru-eecs338/sockets">example code by
-								Stuart Morgan</a>.
-						</p>
+						
 
 						<h3>2014-04-01: Recitation 10</h3>
 
