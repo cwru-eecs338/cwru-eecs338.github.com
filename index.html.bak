@@ -20,8 +20,28 @@
 				<tr>
 					<td id="nav" valign="top"></td>
 					<td valign="top">
+						<h3>2014-04-08: Recitation 11</h3>
+						<p>
+							In this recitation, we continued the discussion of RPC, especially the RPC debugging. Because of the distributed nature of RPC, it is very hard to debug RPC application. One easy way to debug an RPC application
+							is to link the client and server program directly without their <i>rpcgen</i> stubs. However, the program may need to be changed somewhere to combine client and server parts together. A example code that demonstrates 
+							the debugging of RPC can be found <a href="https://github.com/cwru-eecs338/RPC_debugging">here</a>. 	
+						</p>
 						
-
+						<p>
+							Then we went back to the topic of threads. Particularly, we talked about multi-threaded program debugging, which is quite important when you were writing a multi-threaded program. 
+							I introduced several commands in <i>gdb</i> that can be used for multi-thread debugging. The two most useful commands are 
+							<ul>
+							<li>thread thread_no</li>
+							<li>set scheduler-locking mode</li>
+							</ul>
+							The first command will change the current thread to the thread specified by <i>thread_no</i>. The second command can be used to change the mode of scheduler-locking. If we set mode 
+							as <i>on</i> (use command <i>set scheduler-locking on</i>), 
+							then no thread except the current thread may run. The combination of the two commands enables us to control the activities of multiple threads. I also demonstrate the usage of them by a concrete 
+							<a href="https://github.com/cwru-eecs338/thread_syn_semaphore">program</a>.
+							
+						</p>
+						
+						
 						<h3>2014-04-01: Recitation 10</h3>
 
 						<p>
@@ -43,8 +63,7 @@
 							Another way to synchronize threads is to use "mutex" variables, which is demonstrated by <a href="https://github.com/cwru-eecs338/thread_syn_mutex">code for producer-consumer problem</a>.
 						</p>
 						
-						<></>
-
+						
 						<h3>2014-03-18: Recitation 8</h3>
 
 						<p>
