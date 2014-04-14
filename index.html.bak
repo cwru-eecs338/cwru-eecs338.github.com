@@ -20,7 +20,7 @@
 				<tr>
 					<td id="nav" valign="top"></td>
 					<td valign="top">
-						<h3>2014-04-08: Recitation 11</h3>
+						<h3>2014-04-08: Recitation 11 (Debugging of RPC and multithreaded program)</h3>
 						<p>
 							In this recitation, we continued the discussion of RPC, especially the RPC debugging. Because of the distributed nature of RPC, it is very hard to debug RPC application. One easy way to debug an RPC application
 							is to link the client and server program directly without their <i>rpcgen</i> stubs. However, the program may need to be changed somewhere to combine client and server parts together. A example code that demonstrates 
@@ -42,7 +42,7 @@
 						</p>
 						
 						
-						<h3>2014-04-01: Recitation 10</h3>
+						<h3>2014-04-01: Recitation 10 (PRC)</h3>
 
 						<p>
 							In this recitation, we discussed Remote Procedure Call (RPC). The basic way to execute a command on remote host
@@ -54,7 +54,7 @@
 
 						
 
-						<h3>2014-03-25: Recitation 9</h3>
+						<h3>2014-03-25: Recitation 9 (Threads)</h3>
 
 						<p>
 							In the ninth recitation, we continued the discussion of threads. We focused on the synchronization mechanism for multiple threads. 
@@ -64,7 +64,7 @@
 						</p>
 						
 						
-						<h3>2014-03-18: Recitation 8</h3>
+						<h3>2014-03-18: Recitation 8 (Threads)</h3>
 
 						<p>
 							In this recitation, we began to talked about threads. Note that the system calls for threads introduced
@@ -82,7 +82,7 @@
 							There two ways to do this: one way is using the normal <i>return(void * retval)</i> statement, the other one is to use library function
 							<i>void phread_exit(void * retval)</i>. The detailed usage of them is demonstrated by <a href="https://github.com/cwru-eecs338/thread_return_value">this sample code</a>.
 						</p>
-						<h3>2014-03-04: Recitation 7</h3>
+						<h3>2014-03-04: Recitation 7 (System V Semaphore)</h3>
 						
 						<p>
 							In this recitation, we went back to the System V Semaphore. The content which were introduced in Reciation 4 
@@ -96,7 +96,7 @@
 							attached to the data segment of specific process using the function <i>shmat</i> before it can be used by this process.
 						</p>
 
-						<h3>2014-02-25: Recitation 6</h3>
+						<h3>2014-02-25: Recitation 6 (concurrent programming with Monitor and CCR)</h3>
 
 						<p>
 							In sixth recitation, we discussed the Monitor and Conditional Critical Regions (CCR). Their implemenation using semaphore 
@@ -105,7 +105,7 @@
 
 						<p>
 
-						<h3>2014-02-18: Recitation 5</h3>
+						<h3>2014-02-18: Recitation 5 (concurrent programming with semaphore)</h3>
 
 
 						<p>
@@ -119,7 +119,7 @@
 						
 						
 						
-						<h3>2014-02-11: Recitiation 4</h3>
+						<h3>2014-02-11: Recitiation 4 (debugger: gdb and System V Semaphore)</h3>
 
 						<p>
 							In the fourth recitation, we talked about the debugger--gdb, in linux. It is quite important to get familiar with the basic
@@ -134,8 +134,8 @@
 						</p>
 
 
-						<h3>2014-02-04: Recitation 3</h3>
-
+						<h3>Recitation 3 (system calls: fork and exec and the makefile)</h3>
+						<p>2014-02-04</p>
 						<p>
 							In the third recitation, we discussed process and two relevant system call in linux: fork and exec.
 							fork() is used to generate a child process which share the same code with parent process but run independently. 
@@ -152,14 +152,15 @@
 						
 						
 
-						<h3>2014-01-28: Recitation 2</h3>
-
+						<h3>Recitation 2</h3>
+						<p>2014-01-28</p>
 						<p>
 							Cancelled due to severe cold weather.
 						</p>
 
 
-						<h3>2014-01-21: Recitation 1</h3>
+						<h3>Recitation 1 : Basic knowledge about C and linux</h3>
+						<p>2014-01-21</p>
 
 						<p>
 							The first recitation was an introduction to basic knowledge about 
