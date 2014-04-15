@@ -20,7 +20,7 @@
 				<tr>
 					<td id="nav" valign="top"></td>
 					<td valign="top">
-						<h3>Recitation 11 (Debugging of RPC and multithreaded program)</h3>
+						<h3>Recitation 11: Debugging of RPC and multithreaded program</h3>
 						<p>2014-04-08</p>
 						<p>
 							In this recitation, we continued the discussion of RPC, especially the RPC debugging. Because of the distributed nature of RPC, it is very hard to debug RPC application. One easy way to debug an RPC application
