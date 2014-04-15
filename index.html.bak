@@ -20,6 +20,23 @@
 				<tr>
 					<td id="nav" valign="top"></td>
 					<td valign="top">
+						<h3>Recitation 12: Shell Programming</h3>
+						<p>2014-04-15</p>
+						<p>
+							The <i>shell</i> is the term for the <i>command line interpreter</i> of UNIX operating system. The basic functionality of shell includes: command execution in the 
+							background (i.e., append "&" to the command), pipe (i.e. "|" separating commands in a single command line) and input/output redirection (i.e. the symbols < and > in the command line).
+							In this recitation, we discussed about how to implement a shell which includes those functionalities.
+							
+							
+						</p>
+							Pipe is actually a inter-process communication (IPC) mechanism in Linux. It has one end for writing and the other end for reading. The pipe in the shell actually make use of the this IPC.
+							Specifically, a pipe as the IPC, will be created and the standard output of the first command will be redirected to the writing end of the pipe meanwhile the standard input of the second command
+							will be redirected to reading end of the pipe. The mechanism of standard input/output redirection for pipe is the same as that for ">" and "<" used in the command line. It needs to change the 
+							relevant entries in the file descriptor table. The system call <i>dup2</i> can be used to change the entries the file descriptor table.
+						<p>
+								
+						</p>
+						
 						<h3>Recitation 11: Debugging of RPC and multithreaded program</h3>
 						<p>2014-04-08</p>
 						<p>

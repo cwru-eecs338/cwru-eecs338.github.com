@@ -29,7 +29,7 @@
 							
 							
 						</p>
-							Pipe is actually a inter-process communication (IPC) mechanism in Linux. It has one end for writing and the other end for reading. The pipe in the shell actually make use of the this IPC.
+							Pipe is actually a inter-process communication (IPC) mechanism in Linux. It has one end for writing and the other end for reading. The pipe in the shell actually make use of this IPC.
 							Specifically, a pipe as the IPC, will be created and the standard output of the first command will be redirected to the writing end of the pipe meanwhile the standard input of the second command
 							will be redirected to reading end of the pipe. The mechanism of standard input/output redirection for pipe is the same as that for ">" and "<" used in the command line. It needs to change the 
 							relevant entries in the file descriptor table. The system call <i>dup2</i> can be used to change the entries the file descriptor table.
