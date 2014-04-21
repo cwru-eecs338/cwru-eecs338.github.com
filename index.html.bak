@@ -20,6 +20,9 @@
 				<tr>
 					<td id="nav" valign="top"></td>
 					<td valign="top">
+						<h3>Recitation 13</h3>
+						<p>Cancelled.</p>
+						
 						<h3>Recitation 12: Shell Programming</h3>
 						<p>2014-04-15</p>
 						<p>
@@ -29,7 +32,7 @@
 							
 							
 						</p>
-							Pipe is actually a inter-process communication (IPC) mechanism in Linux. It has one end for writing and the other end for reading. The pipe in the shell actually make use of the this IPC.
+							Pipe is actually a inter-process communication (IPC) mechanism in Linux. It has one end for writing and the other end for reading. The pipe in the shell actually make use of this IPC.
 							Specifically, a pipe as the IPC, will be created and the standard output of the first command will be redirected to the writing end of the pipe meanwhile the standard input of the second command
 							will be redirected to reading end of the pipe. The mechanism of standard input/output redirection for pipe is the same as that for ">" and "<" used in the command line. It needs to change the 
 							relevant entries in the file descriptor table. The system call <i>dup2</i> can be used to change the entries the file descriptor table.
@@ -60,7 +63,7 @@
 						</p>
 						
 						
-						<h3>Recitation 10: PRC</h3>
+						<h3>Recitation 10: RPC</h3>
 						<p>2014-04-01</p>
 						<p>
 							In this recitation, we discussed Remote Procedure Call (RPC). The basic way to execute a command on remote host
