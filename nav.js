@@ -4,8 +4,9 @@ function nav(id) {
                 ['slides.html', 'Slides'],
                 ['intro.html', 'Intro to Linux'],
                 ['resources.html', 'Resources'],
+                ['index-spring2014.html','2014 Page'],
                 ['index-spring2013.html','2013 Page'],
-		['index-spring2012.html','2012 Page'],
+		            ['index-spring2012.html','2012 Page'],
                 ['contact.html', 'Contact Info']
                ];
     var navElement = document.getElementById(id);

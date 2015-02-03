@@ -11,7 +11,7 @@
 		<div>
 			<h1>EECS 338: Operating Systems</h1>
 
-			<h2>Spring, 2014</h2>
+			<h2>Spring, 2015</h2>
 		</div>
 		<div>
 			<table cellspacing="20px">
@@ -20,189 +20,75 @@
 				<tr>
 					<td id="nav" valign="top"></td>
 					<td valign="top">
-						<h3>Recitation 13</h3>
-						<p>2014-04-22</p>
-						<p>
-							Cancelled.
-						</p>
-						
-						<h3>Recitation 12: Shell Programming</h3>
-						<p>2014-04-15</p>
-						<p>
-							The <i>shell</i> is the term for the <i>command line interpreter</i> of UNIX operating system. The basic functionality of shell includes: command execution in the 
-							background (i.e., append "&" to the command), pipe (i.e. "|" separating commands in a single command line) and input/output redirection (i.e. the symbols < and > in the command line).
-							In this recitation, we discussed about how to implement a shell which includes those functionalities.
-							
-							
-						</p>
-							Pipe is actually a inter-process communication (IPC) mechanism in Linux. It has one end for writing and the other end for reading. The pipe in the shell actually make use of this IPC.
-							Specifically, a pipe as the IPC, will be created and the standard output of the first command will be redirected to the writing end of the pipe meanwhile the standard input of the second command
-							will be redirected to reading end of the pipe. The mechanism of standard input/output redirection for pipe is the same as that for ">" and "<" used in the command line. It needs to change the 
-							relevant entries in the file descriptor table. The system call <i>dup2</i> can be used to change the entries the file descriptor table.
-						<p>
-								
-						</p>
-						
-						<h3>Recitation 11: Debugging of RPC and multithreaded program</h3>
-						<p>2014-04-08</p>
-						<p>
-							In this recitation, we continued the discussion of RPC, especially the RPC debugging. Because of the distributed nature of RPC, it is very hard to debug RPC application. One easy way to debug an RPC application
-							is to link the client and server program directly without their <i>rpcgen</i> stubs. However, the program may need to be changed somewhere to combine client and server parts together. A example code that demonstrates 
-							the debugging of RPC can be found <a href="https://github.com/cwru-eecs338/RPC_debugging">here</a>. 	
-						</p>
-						
-						<p>
-							Then we went back to the topic of threads. Particularly, we talked about multi-threaded program debugging, which is quite important when you were writing a multi-threaded program. 
-							I introduced several commands in <i>gdb</i> that can be used for multi-thread debugging. The two most useful commands are 
-							<ul>
-							<li>thread thread_no</li>
-							<li>set scheduler-locking mode</li>
-							</ul>
-							The first command will change the current thread to the thread specified by <i>thread_no</i>. The second command can be used to change the mode of scheduler-locking. If we set mode 
-							as <i>on</i> (use command <i>set scheduler-locking on</i>), 
-							then no thread except the current thread may run. The combination of the two commands enables us to control the activities of multiple threads. I also demonstrate the usage of them by a concrete 
-							<a href="https://github.com/cwru-eecs338/thread_syn_semaphore">program</a>.
-							
-						</p>
-						
-						
-						<h3>Recitation 10: RPC</h3>
-						<p>2014-04-01</p>
-						<p>
-							In this recitation, we discussed Remote Procedure Call (RPC). The basic way to execute a command on remote host
-							is to use <i>ssh</i> and <i>rexec</i>. In order to call a remote user-defined procedure, we need to use RPC language to write a protocal 
-							definition file. Then the command <i>rpcgen</i> is used to generate relevant stub file from the protocal definition file. A brief introduction of RPC language can 
-							be found <a href="slides/remote-procedure-calls.pdf">here</a>. <a href="https://github.com/cwru-eecs338/RPC_sample_code">A sample code</a> demonstrating the basic 
-							steps to write program for RPC was discussed in this recitation.
-						</p>
-
-						
-
-						<h3>Recitation 9: Threads</h3>
-						<p>2014-03-25</p>
-						<p>
-							In the ninth recitation, we continued the discussion of threads. We focused on the synchronization mechanism for multiple threads. 
-							As we said before, semaphore is a mechanism to synchronize the activities of multiple process. Actually it can also be used to synchronize
-							the activities of multiple threads. One sample that demonstrates it can be found <a href="https://github.com/cwru-eecs338/thread_syn_semaphore">here</a>.
-							Another way to synchronize threads is to use "mutex" variables, which is demonstrated by <a href="https://github.com/cwru-eecs338/thread_syn_mutex">code for producer-consumer problem</a>.
-						</p>
-						
-						
-						<h3>Recitation 8: Threads</h3>
-						<p>2014-03-18</p>
-						<p>
-							In this recitation, we began to talked about threads. Note that the system calls for threads introduced
-							here need the header file <i><pthread.h></i>. In addition, we should add the option <i>-lpthread</i> when you use gcc to compile and link the multithreaded
-								program as follows: 
-								<ul>
-								<li>gcc -o output_file source_file -lpthread</li>
-								</ul>
-					
-						</p>
-						<p>
-							The library function <i>pthread_join</i> can be used to direct the calling process to wait until specific thread is finished. However, the specified thread must be nondetached. 
-							The state of detach does matter when using 	<i>pthread_join</i>, which is demonstrated by <a href="https://github.com/cwru-eecs338/thread_detached">the sample code</a>.
-							If the specified thread is indeed nondetached, this thread can return some values to the thread which invoke <i>pthread_join</i> when it exits.
-							There two ways to do this: one way is using the normal <i>return(void * retval)</i> statement, the other one is to use library function
-							<i>void phread_exit(void * retval)</i>. The detailed usage of them is demonstrated by <a href="https://github.com/cwru-eecs338/thread_return_value">this sample code</a>.
-						</p>
-						<h3>Recitation 7: System V Semaphore</h3>
-						<p>2014-03-04</p>
-						<p>
-							In this recitation, we went back to the System V Semaphore. The content which were introduced in Reciation 4 
-							was briefly reviewed and we continued to semaphore operation function (semop). Sample code is 
-							<a href="https://github.com/cwru-eecs338/sample_code_semaphore">here</a>. 
-						</p>
-						
-						<p>
-							We also discussed System V shared memory in linux. The system calls associated with shared memory include creation call, 
-							control call, operation call. Their usage is quite similar to that of System V semaphore. The major difference is that shared memory needs to be 
-							attached to the data segment of specific process using the function <i>shmat</i> before it can be used by this process.
-						</p>
-
-						<h3>Recitation 6: concurrent programming with Monitor and CCR</h3>
-						<p>2014-02-25</p>
-						<p>
-							In sixth recitation, we discussed the Monitor and Conditional Critical Regions (CCR). Their implemenation using semaphore 
-							is quite helpful for you to understand their accurate behaviors, which can be found in course slides. Plus, some problems from previous years were 
-							covered, which could be found in the course website.
-
-						<p>
-
-						<h3>Recitation 5: concurrent programming with semaphore</h3>
-						<p>2014-02-18</p>
-
-						<p>
-						 In this recition, we discussed concurrent programming using semaphore. A glance of the book 
-						 <a href="http://www.greenteapress.com/semaphores/"><i>The Little
-								Book of Semaphores</i></a> (warning: the syntax in this book may not
-								conform 100% to the structures presented in class) will be helpful for you to understand concurrent programming. In addition,
-								the solutions of course assignments from previous year are also good materials, which you can find in the course website.
-						</p>
-						
-						
-						
-						
-						<h3>Recitiation 4: debugger--gdb, and System V Semaphore</h3>
-						<p>2014-02-11</p>
-						<p>
-							In the fourth recitation, we talked about the debugger--gdb, in linux. It is quite important to get familiar with the basic
-							 procedures of debugging because it is systematic way to locate the programming errors. A tutorial for gdb can be 
-							 found <a href="http://cseweb.ucsd.edu/classes/fa09/cse141/tutorial_gcc_gdb.html">here</a>.
-							</p>
-							<p>
-								In addition, we also began our discussion of Sytem V Semaphore in linux. Due to the time limit, only semaphore creation function(semget) and
-								semaphore control function (semctl) were covered. Sample code which uses semaphore to synchronize the activities of two processes can be found 
-							<a href="https://github.com/cwru-eecs338/sample_code_semaphore">here</a>. In this sample code, the creation, deletion, wait and sigal operation 
-							on semaphore is encapsulated in a more concise way.
-						</p>
-
-
+						<!--
 						<h3>Recitation 3: system calls--fork and exec, and the makefile</h3>
-						<p>2014-02-04</p>
+						<p>2015-02-03</p>
 						<p>
 							In the third recitation, we discussed process and two relevant system call in linux: fork and exec.
-							fork() is used to generate a child process which share the same code with parent process but run independently. 
-							The sample code for the usage of fork() is <a href="https://github.com/cwru-eecs338/fork_sample_code">here</a>. exec is actually a family of 
-							linux system calls. This family consists of 6 different functions: execl, execv, execle, execve, execlp and execvp. 
-							I demonstrate two sample codes one is for <a href="https://github.com/cwru-eecs338/exec_sample_code">execl</a>, the other is 
+							fork() is used to generate a child process which share the same code with parent process but run independently.
+							The sample code for the usage of fork() is <a href="https://github.com/cwru-eecs338/fork_sample_code">here</a>. exec is actually a family of
+							linux system calls. This family consists of 6 different functions: execl, execv, execle, execve, execlp and execvp.
+							I demonstrate two sample codes one is for <a href="https://github.com/cwru-eecs338/exec_sample_code">execl</a>, the other is
 							for <a href="https://github.com/cwru-eecs338/exec_sample_code">execlp</a>.
-						</p>			
-							
-						<p>	
-							I also talked about the makefile in this recitation. The makefile is quite useful for compilation and linking, especially 
+						</p>
+
+						<p>
+							I also talked about the makefile in this recitation. The makefile is quite useful for compilation and linking, especially
 							if the program contains several source files and header files. A tutorial of makefile can be found <a href="http://mrbook.org/tutorials/make/">here</a>.
 						</p>
-						
-						
-
-						<h3>Recitation 2</h3>
-						<p>2014-01-28</p>
+					-->
+						<h3>Recitation 2: Basic knowledge about C and linux</h3>
+						<p>2015-01-27</p>
 						<p>
-							Cancelled due to severe cold weather.
+							The second recitation introduced to the elementary features of the
+							C language and development on a Linux platform. Java and C were compared (similar syntax,
+							garbage collection vs manual memory management). All assignments in this course will be completed in C language.
+						</p>
+					<p>
+						For an indepth tutorial on coding C in a Linux environment, consider <a href="http://how-to.linuxcareer.com/c-development-on-linux-introduction"><i>this excellent series.</i></a>
+						Also, <a href="relevant materials/Linux Fundamentals.pdf"><i>Linux Fundamentals</i></a> is a great reference
+						for the basic commands in linux.
+					</p>
+
+
+						<h3>Recitation 1: Introduction to EECS 338 and how to be successful in the course</h3>
+						<p>2015-01-20</p>
+
+						<p>
+							<ul>
+							<li>Main course topics:<br></li>
+							<ul>
+							<li>UNIX: C, shell, sys calls, etc</li>
+							<li>Concurrent Algorithms/Programming</li>
+							<li>Operating Systems</li>
+							<li>Ideally: Students not worry about dev environment &amp; C, only about concurrent programing and OS theory.</li>
+							</ul>
+							<li>Grading & TA Communication:<br></li>
+							<ul>
+							<li>All emails subjects should be prefixed with "EECS 338: "</li>
+							<li>Cc all TAs!!</li>
+							<li>Assignments will either be written algorithmic or coding based.</li>
+							<li>No rars, 7z, etc!!! Either zip or nothing!! Flat directories! No need for external libraries!</li>
+							<li>Code will be checked for cheating.</li>
+							<li>Penalties: </li>
+							<ul>
+							<li>Code not compiling</li>
+							<li>Poor craftsmanship</li>
+							<li>Code not compiling!!!</li>
+							<li>Function safety (not checking system call return values)</li>
+							</ul>
+							</ul>
+							<li>Development Environment:<br></li>
+							<ul>
+							<li>Ubuntu 12.04.5 LTS. No Windows (neither visual studio nor cygwin) nor Mac OS X. (Because of RPC, IPC, sys calls, etc.)</li>
+							<li>Consider using a virtual machine: VMWare, Virtualbox, KVM, etc.</li>
+							<li>Avoid IDEs!! No C-make, other tools: Only need text editor &amp; good &#8217;ole gcc!!</li>
+							<li>Ultimately, code should compile perfectly on &#8220;eecslinab{?}.case.edu&#8221;</li>
+							</ul>
+							</ul>
 						</p>
 
 
-						<h3>Recitation 1: Basic knowledge about C and linux</h3>
-						<p>2014-01-21</p>
-
-						<p>
-							The first recitation was an introduction to basic knowledge about 
-							C and linux commands. Lots of students are more familiar with java. 
-							The	major difference between C and java is that C is not object-orientied,
-							which means that there is no concept of class in C. Because assignments in 
-							this course is encouraged to be done by C language, we need to know the basic
-							knowledge about C. Actually there are lots of book about C online, which is not hard to find.
-							
-							</p>
-						<p>
-							As for the basic commands in linux, I think a glance of the book <a href="relevant materials/Linux Fundamentals.pdf"><i>Linux Fundamentals</i></a> will be
-							quite helpful.
-						
-								
-						</p>
-							
-						
 
 
 						<h3>Summary</h3>
