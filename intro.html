@@ -56,15 +56,21 @@ appropriate field, and you will be prompted for a user name when you login.
 <h3><a name="files"></a>Accessing Files on a Unix Lab Computer</h3>
 
 <p>
-	If you use Windows, there is a program called
-	<a href="http://winscp.net/eng/index.php">WinSCP</a> that will let you copy
+	Windows, Mac OS X, and Linux users can use a <a href="http://en.wikipedia.org/wiki/Graphical_user_interface">GUI</a> program called
+	<a href="https://filezilla-project.org/">Filezilla</a> to copy
 	files between the lab computer and your machine. The login process
-	is similar to that for PuTTY. </p>
+	is similar to that for PuTTY. Read <a href"https://wiki.filezilla-project.org/Using#Connecting_to_an_FTP_server">these instructions</a> 
+	for how to connect. (Note that you will be using the <i>SFTP</i>protocol <i>not FTP</i>, 
+	so take care to regard the special <i>SFTP</i> instructions.) </p>
 
 <p>
-	For Mac OS X and Linux/Unix users, you can use the command <code>scp</code>,
-	which stands for <i>secure copy</i>. For example, to copy files in [dir] from
-	your computer to the lab computer, you can use this command on your computer:
+	Mac OS X and Linux/Unix <a href="http://en.wikipedia.org/wiki/Command-line_interface">CLI</a> users can use the command <code>scp</code>,
+	which stands for <i>secure copy</i>. For a comprehensive list of examples
+	please peruse <a href="http://www.hypexr.org/linux_scp_help.php">this website</a>, 
+	otherwise see below: </p>
+<p>
+	For example, to copy files in [dir] from your computer to the 
+	lab computer, you can use this command on your computer:
 
 <blockquote><code>scp -r [dir] abc123@eecslinab.case.edu:</code></blockquote>
 
