@@ -1,0 +1,33 @@
+For more information about Moss Software please follow the link below:
+http://theory.stanford.edu/~aiken/moss/
+
+When you register for moss, what happens is they just send you a Perl script for uploading submissions. 
+I have attached the moss script given to me by Gary Doran. 
+
+Before using the script:
+- Be sure to download all assignments and make a directory of only the zip file you have downloaded. (To download all assignments as a zip- http://library.blackboard.com/ref/3ea64795-6ecc-4abd-b595-0a9a8dfdec94/Content/_instructor_course/instructor_course_tool_assess_assignments_download.htm) 
+- Extract that zip (Usually named gradebook_date) into the directory. 
+- And run 'extract.py' also added into this git directory.
+- Be sure that every student has a directory and their files in it. If they have sub-directories, be sure to either fix them in grading or include them when running the code. 
+
+Using the script:
+
+- We will need parameters to run the script that are;
+
+-l specifies the language (probably c or java)
+-d says to group the assignment files by directory
+In the case of a "base file" that is distributed to the students (i.e. an interface or some starter code).To exclude such files in the plagiarism check, use the "-b" flag.
+
+Examples of running the script:
+
+$ ./moss.pl -l c -d as1/*/*.c as1/*/*.h (Will get every file of extention .c and .h in the directories created)
+
+$ ./moss.pl -l c -b base_file.c -d as1/*/*.c as1/*/*.h (With a base file if any)
+
+After using the script:
+
+The script should give you an URL to check the cheating results. It stays only a few days so you can use 'wget -mk URL' to download them.
+
+-Remarks-
+
+I thank Gary Doran for the information he gave me in Spring 2014-15 to use this software.
