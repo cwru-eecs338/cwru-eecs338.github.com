@@ -1,0 +1,106 @@
+Linux commands:
+
+Linux usage is extremely well documented. All tasks that can be done in GUI can be done in terminal. A quick search on how to accomplish something
+in terminal will provide clear and concise answers.
+
+Pressing tab will autocomplete whatever you are typing unless there are two files of the same name. In that case, it will fill as much as it can.
+
+rm to delete files/directories
+	rm -r <foldername> recursive remove. Removes everything including subfolders.
+	Note: rm -r ~/ will delete everything in your home directory. Never do this.
+
+vim <new textfile name> -make a new text file. Save it or it is deleted when closed (touch <filename> for those who don’t use vim. or just make a new one in sublime)
+mkdir <directory name> -make a new directory folder
+./<filename> to execute the file
+ls to display the contents of a directory
+cd = change directory
+	cd <directory name> to navigate into a directory
+	cd ../ to return to the parent directory
+	Can go into multiple directory layers at once Ex. cd jim/bin/hello
+cp <filename> <destination directory> Copies the file to the destination
+mv <filename> <destination directory> Moves/cuts the file and pastes to destination
+
+To install software, sudo apt-get install <program name> Ex. sudo apt-get install eclipse
+
+To connect to remote host: ssh username@hostname Ex. ssh yourcaseid@eecslinab3.case.edu
+
+To copy to remote host: scp filename username@hostname:. Ex. scp adlkjlk.txt jhd70@eecslinab3.case.edu:.
+
+
+Pointer examples with explanation:
+
+Are these valid/what do they do
+1. int blah = 5;
+   int *foo = blah;
+
+2. int blah = 5;
+   int *foo = &blah;
+
+3. int blah = 5;
+   int *foo;
+   *foo = blah;
+
+4. int *foo;
+   int blah = 5;
+   foo = &blah;
+   *foo = 4;
+
+5. int *arr;
+   arr[4] = 0;
+
+6. int *arr = malloc(sizeof(int) * 10);
+   arr[7] = 8;
+
+Describe what these declarations mean
+7.a) int *arr[5]
+  b) int (*arr)[5]
+  c) int *(arr[5])
+
+Answers:
+
+
+1. Invalid, cannot assign value 5 to a pointer. The pointer holds a memory address.
+
+2. Valid. Assign the memory location of blah to pointer foo. Now printf("%d", *foo) will print 5.
+
+3. INVALID! Set blah = 5, create an int pointer foo. Then dereference foo and set its contents to 5. Note that
+   the address of foo was never assigned, therefore, foo has no address (value). Cannot dereference a non-specified
+   memory address, so this will segfault. This is a common mistake!
+
+4. Valid. The difference between Ex 3 and 4 is that we are assigning an address to foo in 4 before we try to 
+   store a value to the memory location. Both foo and blah are now 4.
+
+5. Invalid. Never allocated space for the array before assigning values to it.
+
+6. Valid. Allocated space for array size 10 of ints. Assigned 8th element of array to be 8. Note that the name of the
+   pointer to the first element of the array, arr, can also be used as the name of the array.
+
+7. int *arr[5] 
+
+This is an array of 5 int pointers
+
+int (*arr)[5] 
+
+An pointer to an array of 5 ints
+
+int *(arr[5])
+
+An array of 5 int pointers
+
+
+These have the potential to be even more complicated and confusing. There is a helpful tool you can use if you 
+are ever confused about what a complex pointer declaration is. The tool is called cdecl.
+
+To install in linux, type sudo apt-get install cdecl
+
+Then to run simply type cdecl. You will then be running an interpreter.
+
+Enter "explain <declaration>" and the program will return text describing what the declaration means.
+
+
+
+
+
+
+For explanations regarding code examples I covered, look at the code, it has comments.
+
