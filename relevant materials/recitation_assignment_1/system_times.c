@@ -4,7 +4,7 @@
 #include <unistd.h>
 #include <sys/times.h>
 
-#define LOOP_ITERATIONS (0x7fffffff)
+#define LOOP_ITERATIONS (0x7fffffff) // biggest positive 32 bit integer
 
 int main()
 {

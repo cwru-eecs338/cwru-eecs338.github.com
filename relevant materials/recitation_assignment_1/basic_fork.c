@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <errno.h>
+#include <string.h>
 #include <unistd.h>
 
 int main()
@@ -22,6 +24,8 @@ int main()
         process_no = 1;
         current_number = 0;
     } else {
+        fprintf(stderr, "errno %d: %s\n", errno, strerror(errno));
+        // if you really want that extra info ^
         perror("fork() failed\n");
         exit(EXIT_FAILURE);
     }

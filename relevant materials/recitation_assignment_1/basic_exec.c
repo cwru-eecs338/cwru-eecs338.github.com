@@ -12,10 +12,10 @@ int main() {
 
     pid = fork();
 
-    if (fork > 0) {
+    if (pid > 0) {
         wait();
         printf("Done.\n");
-    } else if (fork == 0) {
+    } else if (pid == 0) {
         execvp(cat_file, cat_args);
     } else {
         return EXIT_FAILURE;

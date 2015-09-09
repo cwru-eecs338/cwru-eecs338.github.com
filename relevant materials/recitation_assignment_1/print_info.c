@@ -18,6 +18,8 @@ int main()
 
     // print them...
 
+    printf("%d\n", uid);
+
     return EXIT_SUCCESS;
 }
 
