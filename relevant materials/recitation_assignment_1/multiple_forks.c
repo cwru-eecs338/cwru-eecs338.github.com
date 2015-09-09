@@ -19,6 +19,10 @@ int main()
             // child
             // look at fork_count
             break;
+
+            // better way!!!!
+            // do_child_stuff();
+            // return 0; -or- exit(0);
         } else {
             perror("fork() failed\n");
             exit(EXIT_FAILURE);
