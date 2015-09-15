@@ -8,7 +8,7 @@ function nav(id) {
                 ['index-spring2014.html','Spring 2014 Page'],
                 ['index-spring2013.html','Spring 2013 Page'],
 		['index-spring2012.html',' Spring 2012 Page'],
-                ['contact.html', 'Contact Info']
+                ['contact.html', 'TA Contact Info']
                ];
     var navElement = document.getElementById(id);
     for(var i = 0; i < NAVS.length; i++) {
