@@ -4,6 +4,7 @@ function nav(id) {
         ['course-materials/eecs338-syllabus-spring-2016.pdf', 'Syllabus'],
         //['contact.html', 'Contacts'],
         ['https://github.com/cwru-eecs338', 'Code Examples'],
+        ['past-assignments.html', 'Past Assignments'],
         ['slides.html', 'Recitation Slides'],
         ['intro.html', 'Intro to Linux'],
         ['resources.html', 'Resources'],
